@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>People & Development — Home</title>
+  <title>People & Development — Human-Scale Development for a Changing World</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div class="top-bar">
     <div>Revival Issue • Vol. 01 (2026)</div>
     <div>Grassroots Field Realities × Open Commons</div>
@@ -16,7 +19,11 @@
 
   <header>
     <div class="container nav-inner">
-      <a href="index.html" class="brand"><span class="brand-mark"></span> PEOPLE &amp; DEVELOPMENT</a>
+      <a href="index.html" class="brand">
+        <span class="brand-mark"></span>
+        PEOPLE &amp; DEVELOPMENT
+      </a>
+
       <nav class="nav-links">
         <a href="the-commons.html">The Commons</a>
         <a href="sandboxes.html">Data Sandboxes</a>
@@ -24,10 +31,11 @@
         <a href="events.html">Public Outreach</a>
         <a href="print-zine.html">Print Zine</a>
       </nav>
+
       <div class="nav-actions">
-        <div class="toggle-wrap">
-          <button class="toggle-btn active">Public View</button>
-          <button class="toggle-btn">Academic View</button>
+        <div class="toggle-wrap" role="group" aria-label="Audience View Switch">
+          <button class="toggle-btn active" id="btn-public" onclick="switchView('public')">Public</button>
+          <button class="toggle-btn" id="btn-academic" onclick="switchView('academic')">Academic</button>
         </div>
         <a href="sandboxes.html" class="btn btn-primary">Explore Open Data</a>
       </div>
@@ -35,17 +43,100 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="page-header">
       <div class="container">
-        <span class="section-label">Knowledge Portal &amp; Commons</span>
-        <h1 class="page-title">Human-Scale Development for a Changing World.</h1>
-        <p class="page-intro">Grounded Realities. Open Data. Democratic Futures.</p>
-        <p style="max-width: 760px; margin-top: 1.5rem; font-size: 1.05rem; border-left: 2px solid var(--border-dark); padding-left: 1rem;">
-          Decades ago, pioneers showed that progress is measured by human dignity, equitable access, and ecological harmony. Today, People &amp; Development returns as an open-access knowledge portal connecting grassroots action across Kerala and India with global policy networks.
+        <span class="section-label">Open-Access Knowledge Portal</span>
+        <h1 class="page-title" style="font-size: clamp(2.3rem, 4.5vw, 3.8rem); line-height: 1.12; max-width: 980px;">Human-Scale Development for a Changing World.</h1>
+        <p class="page-intro" style="font-size: 1.2rem; margin-bottom: 1.5rem;">Grounded Realities. Open Data. Democratic Futures.</p>
+        <p style="font-size: 1.05rem; max-width: 720px; margin-bottom: 2.25rem; border-left: 2px solid var(--border-dark); padding-left: 1.25rem;">
+          Decades ago, pioneers showed that true progress is measured not by towering structures or abstract economic aggregates, but by human dignity, equitable access, and ecological harmony[cite: 2]. Today, <em>People &amp; Development</em> returns as a living, open-access digital commons—connecting grassroots action across Kerala and India with global policy networks[cite: 1, 2].
         </p>
-        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
           <a href="the-commons.html" class="btn btn-primary">Read The Commons</a>
           <a href="homages.html" class="btn btn-secondary">Explore Homages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Commons Spotlight (Manifesto & Then vs Now) -->
+    <section class="content-section">
+      <div class="container grid-2">
+        <div>
+          <span class="section-label">A Tradition of Questioning, A Future of Building</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 1rem; line-height: 1.2;">Carrying the Flame Forward</h2>
+          <p style="margin-bottom: 1.2rem; color: var(--text-muted); font-size: 1.02rem;">
+            When four visionaries—<strong>C. Achutha Menon</strong>, <strong>Dr. K.N. Raj</strong>, <strong>Laurie Baker</strong>, and <strong>T.R. Chandradutt ("Dutt Mash")</strong>—came together to shape the discourse around decentralized planning, cost-effective habitat, and human development, they challenged orthodoxies[cite: 1, 2].
+          </p>
+          <div style="font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; margin: 1.5rem 0; padding-left: 1rem; border-left: 2px solid var(--accent);">
+            “True development has never been about grand monuments or glossy economic statistics. Solutions must be human-scale, local, and democratically owned.”[cite: 1, 2]
+          </div>
+          <p style="color: var(--text-muted); font-size: 1.02rem; margin-bottom: 1.5rem;">
+            We do not look back out of nostalgia; we look back for orientation[cite: 1, 2]. The realities confronting us in the present century—erratic climate patterns, precarious labour, an aging society, and unbridled urbanization—demand the same plain-spoken courage[cite: 1, 2].
+          </p>
+          <a href="the-commons.html" class="btn btn-secondary">Full Commons Statement →</a>
+        </div>
+
+        <div class="matrix-card">
+          <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">Historical Continuity</h4>
+          <div class="matrix-row">
+            <div>
+              <span class="m-tag">Then</span>
+              <strong>Low-Cost Habitat &amp; Local Planning</strong>[cite: 2]
+            </div>
+            <div class="m-arrow">→</div>
+            <div>
+              <span class="m-tag">Now</span>
+              <strong>Climate Resilience &amp; Open Data</strong>[cite: 2]
+            </div>
+          </div>
+          <div class="matrix-row">
+            <div>
+              <span class="m-tag">Then</span>
+              <strong>Grassroots Literacy &amp; Health</strong>[cite: 2]
+            </div>
+            <div class="m-arrow">→</div>
+            <div>
+              <span class="m-tag">Now</span>
+              <strong>Universal Care &amp; Civic Tech</strong>[cite: 2]
+            </div>
+          </div>
+          <div class="matrix-row">
+            <div>
+              <span class="m-tag">Then</span>
+              <strong>Demystifying Architecture</strong>[cite: 2]
+            </div>
+            <div class="m-arrow">→</div>
+            <div>
+              <span class="m-tag">Now</span>
+              <strong>Demystifying Policy &amp; Algorithms</strong>[cite: 2]
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Homages Spotlight / Video Frame -->
+    <section class="content-section" style="background: var(--bg-alt);">
+      <div class="container grid-2" style="align-items: center;">
+        <div class="video-frame-wrap">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/r6ni3aFraXE" 
+            title="Laurie Baker: Uncommon Sense" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div>
+          <span class="section-label">Living Public Space</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.75rem;">Homages to the Path-Finders</h2>
+          <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.4; font-style: italic; margin-bottom: 1rem;">
+            “We’ve got to stop thinking big and go back to the idea that small is beautiful.”
+          </blockquote>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Honoring Laurie Baker, C. Achutha Menon, Dr. K.N. Raj, and T.R. Chandradutt[cite: 1, 2]. Discover how cost-effective habitat, passive ventilation, and material frugality formed the bedrock of decentralized planning in Kerala and COSTFORD[cite: 1, 2].
+          </p>
+          <a href="homages.html" class="btn btn-secondary">Explore Homages Archive →</a>
         </div>
       </div>
     </section>
@@ -54,32 +145,87 @@
     <section class="content-section">
       <div class="container">
         <span class="section-label">How We Work</span>
-        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 2rem;">Knowledge Without Academic Gatekeeping</h2>
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 2rem;">Knowledge Without Academic Gatekeeping</h2>
         <div class="grid-4">
           <div class="card">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700;">01 / RADICAL CLARITY</span>
-            <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">The Commons</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">Plain-language summaries, core convictions, and demystified policy teardowns for every citizen.</p>
-            <a href="the-commons.html" style="margin-top: 1rem; display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--accent);">Enter The Commons →</a>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Demystified Policy</h3>
+            <p style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.75rem;">Breaking down academic pretension[cite: 2]</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Plain-language summaries, visual micro-essays, and jargon-free policy teardowns that any citizen can understand[cite: 2].</p>
           </div>
           <div class="card">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700;">02 / OPEN DATA</span>
-            <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Data Sandboxes</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">Interactive maps down to the Grama Panchayat level backed by raw CSV/JSON datasets.</p>
-            <a href="sandboxes.html" style="margin-top: 1rem; display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--accent);">Open Sandboxes →</a>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Data Sandboxes</h3>
+            <p style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.75rem;">Full transparency &amp; civic audit[cite: 2]</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Interactive maps filtered down to the Grama Panchayat/Ward level, backed by raw CSV/JSON datasets[cite: 2].</p>
           </div>
           <div class="card">
-            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700;">03 / LIVING TRIBUTES</span>
-            <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Homages</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">Remembering Laurie Baker, C. Achutha Menon, Dr. K.N. Raj, and T.R. Chandradutt.</p>
-            <a href="homages.html" style="margin-top: 1rem; display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--accent);">View Homages →</a>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700;">03 / AUDIO LAYER</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Field Dispatches</h3>
+            <p style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.75rem;">Research built for everyday life[cite: 2]</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">3-minute WhatsApp voice notes in Malayalam/English, narrative podcasts, and audio-papers[cite: 2].</p>
           </div>
           <div class="card">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); font-weight: 700;">04 / PUBLIC OUTREACH</span>
-            <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Civic Roundtables</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">Transforming knowledge into collective public action via conclaves and workshops.</p>
-            <a href="events.html" style="margin-top: 1rem; display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--accent);">View Events →</a>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Collective Action</h3>
+            <p style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.75rem;">Knowledge into praxis[cite: 2]</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Annual People and Development Summit, three thematic Quarterly Conclaves, workshops, and roundtables[cite: 2].</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Preview Cards -->
+    <section class="content-section">
+      <div class="container">
+        <span class="section-label">Live Preview</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 2rem;">Local Realities, Global Connections</h2>
+        <div class="grid-3">
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Interactive Sandbox</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">The Panchayat Climate &amp; Care Index</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Explore localized health, water management, and social security data across 1,000+ local bodies[cite: 2].</p>
+            </div>
+            <a href="sandboxes.html" style="font-size: 0.85rem; font-weight: 600; color: var(--accent);">Launch Interactive Map →</a>
+          </div>
+
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">From The Field</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">The Development Dialogue: Coastal Adaptation</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">A marine researcher and a local artisanal fisher debate seawall alternatives along the Thiruvananthapuram coast[cite: 2].</p>
+            </div>
+            <a href="the-commons.html" style="font-size: 0.85rem; font-weight: 600; color: var(--accent);">Read Dialogue &amp; View Data →</a>
+          </div>
+
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Public Outreach</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Q2 Regional Development Roundtable</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Comparing primary care delivery across decentralized Kerala Panchayats and urban municipal clinics[cite: 2].</p>
+            </div>
+            <a href="events.html" style="font-size: 0.85rem; font-weight: 600; color: var(--accent);">View Calendar &amp; Register →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Print Zine Banner -->
+    <section class="content-section" style="background: #1f201e; color: #edece8;">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <span class="section-label" style="color: #d17855;">Bridging the Digital Divide</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 1rem;">The Quarterly Print Edition</h2>
+          <p style="color: #b5b4af; font-size: 1rem; margin-bottom: 1.5rem;">
+            We believe knowledge must not remain trapped behind screens or expensive academic paywalls[cite: 1, 2]. Printed on lightweight recycled paper, priced affordably for students, Panchayat libraries, and civic activists[cite: 2].
+          </p>
+          <a href="print-zine.html" class="btn btn-accent">Subscribe to the Print Edition</a>
+        </div>
+        <div style="border: 1px dashed rgba(255, 255, 255, 0.25); padding: 2rem; border-radius: 6px; text-align: center; background: rgba(255, 255, 255, 0.03);">
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.5rem;">The Bookazine Format</h4>
+          <p style="color: #b5b4af; font-size: 0.9rem; margin-bottom: 1rem;">Every printed report includes Scan-to-Cloud QR codes linking directly to datasets and audio summaries on your phone[cite: 2].</p>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #d17855;">ISSN: 2026-PD-01</span>
         </div>
       </div>
     </section>
@@ -89,38 +235,63 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <h3 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">PEOPLE &amp; DEVELOPMENT</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem;">Published by: <strong>NN Syam Chandra</strong></p>
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">PEOPLE &amp; DEVELOPMENT</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.75rem;">Journal. Portal. Community.[cite: 2]</p>
+          <p style="font-size: 0.8rem; color: var(--text-subtle);">
+            Published by: <strong>NN Syam Chandra</strong>[cite: 2]<br>
+            Bridging grassroots field realities across Kerala and India with global development discourse[cite: 1].
+          </p>
         </div>
         <div class="footer-col">
-          <h5>Pages</h5>
+          <h5>Engage</h5>
           <ul>
-            <li><a href="the-commons.html">The Commons</a></li>
-            <li><a href="sandboxes.html">Data Sandboxes</a></li>
-            <li><a href="homages.html">Homages</a></li>
+            <li><a href="events.html">Annual Summit</a>[cite: 2]</li>
+            <li><a href="events.html">Policy Hackathons</a>[cite: 2]</li>
+            <li><a href="events.html">Civic Roundtables</a>[cite: 2]</li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Programs</h5>
+          <h5>Explore</h5>
           <ul>
-            <li><a href="events.html">Public Outreach</a></li>
-            <li><a href="print-zine.html">Print Edition</a></li>
+            <li><a href="the-commons.html">The Commons</a>[cite: 2]</li>
+            <li><a href="sandboxes.html">Data Sandboxes</a>[cite: 2]</li>
+            <li><a href="the-commons.html">Audio Dispatches</a>[cite: 2]</li>
+            <li><a href="print-zine.html">Print Subscriptions</a>[cite: 2]</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Homages &amp; Legal</h5>
           <ul>
-            <li><a href="homages.html">COSTFORD Pioneers</a></li>
-            <li><a href="#">Creative Commons Open-Access</a></li>
-            <li><a href="#">Peer-Review SOP</a></li>
+            <li><a href="homages.html">Homages Collection</a></li>
+            <li><a href="homages.html">1990s COSTFORD Collection</a>[cite: 2]</li>
+            <li><a href="#">Open Data (CC BY-SA)</a>[cite: 2]</li>
+            <li><a href="#">Peer-Review SOP</a>[cite: 2]</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>Email: contact@peopleanddevelopment.org</div>
-        <div>© 2026 People &amp; Development.</div>
+        <div>
+          Email: <a href="mailto:contact@peopleanddevelopment.org">contact@peopleanddevelopment.org</a> | WhatsApp: <a href="#">Join Broadcast Channel</a>[cite: 2]
+        </div>
+        <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.[cite: 2]</div>
       </div>
     </div>
   </footer>
+
+  <script>
+    function switchView(mode) {
+      const publicBtn = document.getElementById('btn-public');
+      const academicBtn = document.getElementById('btn-academic');
+      if (mode === 'academic') {
+        academicBtn.classList.add('active');
+        publicBtn.classList.remove('active');
+        document.body.classList.add('academic-view');
+      } else {
+        publicBtn.classList.add('active');
+        academicBtn.classList.remove('active');
+        document.body.classList.remove('academic-view');
+      }
+    }
+  </script>
 </body>
 </html>
