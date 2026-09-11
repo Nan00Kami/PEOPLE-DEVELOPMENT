@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Legacy &amp; Manifesto — People &amp; Development</title>
+  <title>The Commons — People & Development</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="top-bar">
     <div>Revival Issue • Vol. 01 (2026)</div>
-    <div>The Legacy</div>
+    <div>Core Manifesto &amp; Orientation</div>
     <div>Kerala, India</div>
   </div>
 
@@ -18,9 +18,9 @@
     <div class="container nav-inner">
       <a href="index.html" class="brand"><span class="brand-mark"></span> PEOPLE &amp; DEVELOPMENT</a>
       <nav class="nav-links">
-        <a href="the-legacy.html" class="active">The Legacy</a>
+        <a href="the-commons.html" class="active">The Commons</a>
         <a href="sandboxes.html">Data Sandboxes</a>
-        <a href="archives.html">Archives</a>
+        <a href="homages.html">Homages</a>
         <a href="events.html">Public Outreach</a>
         <a href="print-zine.html">Print Zine</a>
       </nav>
@@ -34,7 +34,7 @@
     <section class="page-header">
       <div class="container">
         <span class="section-label">A Tradition of Questioning, A Future of Building</span>
-        <h1 class="page-title">Carrying the Flame Forward</h1>
+        <h1 class="page-title">The Commons</h1>
         <p class="page-intro">
           Genuine progress is never handed down from above; it is built together, step by step, at a human scale.
         </p>
@@ -44,19 +44,16 @@
     <section class="content-section">
       <div class="container grid-2">
         <div>
-          <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1.25rem;">Our Core Manifesto</h2>
+          <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1.25rem;">Democratizing Knowledge &amp; Action</h2>
           <p style="margin-bottom: 1.2rem; color: var(--text-muted); font-size: 1.05rem;">
-            True development has never been about grand monuments or glossy economic statistics. Decades ago, four visionaries—<strong>C. Achutha Menon</strong>, <strong>Dr. K.N. Raj</strong>, <strong>Laurie Baker</strong>, and <strong>T.R. Chandradutt ("Dutt Mash")</strong>—came together with a shared conviction: that planning, habitat, and science belong in the hands of ordinary people.
+            True development has never been about grand monuments or glossy economic statistics. Decades ago, four visionaries—<strong>C. Achutha Menon</strong>, <strong>Dr. K.N. Raj</strong>, <strong>Laurie Baker</strong>, and <strong>T.R. Chandradutt ("Dutt Mash")</strong>—came together with a shared conviction: that planning, habitat, and science belong in the hands of ordinary people[cite: 1].
           </p>
           <p style="margin-bottom: 1.2rem; color: var(--text-muted); font-size: 1.05rem;">
-            Through pioneering efforts that laid the ground for COSTFORD and, later, the Laurie Baker Centre for Habitat Studies, they demystified architecture and economic policy. They proved that human dignity, ecological sense, and decentralized democracy build far more resilient communities than top-down mandates.
+            Through pioneering efforts that laid the ground for COSTFORD and, later, the Laurie Baker Centre for Habitat Studies, they demystified architecture and economic policy[cite: 1]. They proved that human dignity, ecological sense, and decentralized democracy build far more resilient communities than top-down mandates[cite: 1].
           </p>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
-            People &amp; Development has inherited that spirit of fearless questioning. Today that spirit is not an excursion into nostalgia for us, but our very orientation. The realities confronting us in the present century—erratic climate patterns, precarious labour, an aging society, and unbridled urbanization—demand the same plain-spoken courage.
+            People &amp; Development has inherited that spirit of fearless questioning[cite: 1]. Today that spirit is not an excursion into nostalgia for us, but our very orientation[cite: 1]. The realities confronting us in the present century—erratic climate patterns, precarious labour, an aging society, and unbridled urbanization—demand the same plain-spoken courage[cite: 1].
           </p>
-          <div style="margin-top: 1.5rem;">
-            <a href="archives.html" class="btn btn-secondary">Explore the Living Archives →</a>
-          </div>
         </div>
 
         <div class="matrix-card">
@@ -64,34 +61,34 @@
           <div class="matrix-row">
             <div>
               <span class="m-tag">Then</span>
-              <div>Low-Cost Habitat &amp; Local Planning</div>
+              <div>Low-Cost Habitat &amp; Local Planning[cite: 2]</div>
             </div>
             <div class="m-arrow">→</div>
             <div>
               <span class="m-tag">Now</span>
-              <div>Climate Resilience &amp; Open Data</div>
+              <div>Climate Resilience &amp; Open Data[cite: 2]</div>
             </div>
           </div>
           <div class="matrix-row">
             <div>
               <span class="m-tag">Then</span>
-              <div>Grassroots Literacy &amp; Health</div>
+              <div>Grassroots Literacy &amp; Health[cite: 2]</div>
             </div>
             <div class="m-arrow">→</div>
             <div>
               <span class="m-tag">Now</span>
-              <div>Universal Care &amp; Civic Tech</div>
+              <div>Universal Care &amp; Civic Tech[cite: 2]</div>
             </div>
           </div>
           <div class="matrix-row">
             <div>
               <span class="m-tag">Then</span>
-              <div>Demystifying Architecture</div>
+              <div>Demystifying Architecture[cite: 2]</div>
             </div>
             <div class="m-arrow">→</div>
             <div>
               <span class="m-tag">Now</span>
-              <div>Demystifying Policy &amp; Algorithms</div>
+              <div>Demystifying Policy &amp; Algorithms[cite: 2]</div>
             </div>
           </div>
         </div>
@@ -101,9 +98,9 @@
     <!-- The Audio Layer -->
     <section class="content-section">
       <div class="container">
-        <span class="section-label">Audio Layer</span>
+        <span class="section-label">Audio Commons</span>
         <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem;">Audio Dispatches &amp; Field Notes</h2>
-        <p style="max-width: 700px; color: var(--text-muted); margin-bottom: 2rem;">Research formatted for daily commute and field workers. Available as 3-minute voice notes in Malayalam and English.</p>
+        <p style="max-width: 700px; color: var(--text-muted); margin-bottom: 2rem;">Research formatted for daily life and field workers[cite: 2]. Available as 3-minute voice notes in Malayalam and English[cite: 2].</p>
         <div class="grid-2">
           <div class="card">
             <span class="m-tag">Audio Dispatch #14</span>
@@ -124,8 +121,8 @@
 
   <footer>
     <div class="container footer-bottom">
-      <div>Email: contact@peopleanddevelopment.org</div>
-      <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.</div>
+      <div>Email: contact@peopleanddevelopment.org[cite: 2]</div>
+      <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access[cite: 2].</div>
     </div>
   </footer>
 </body>
