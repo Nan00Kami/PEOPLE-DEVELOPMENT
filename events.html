@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Public Outreach & Events — People & Development</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,6 +27,10 @@
         <a href="print-zine.html">Print Zine</a>
       </nav>
       <div class="nav-actions">
+        <div class="toggle-wrap" role="group" aria-label="Audience View Switch">
+          <button class="toggle-btn active" id="btn-public" onclick="switchView('public')">Public</button>
+          <button class="toggle-btn" id="btn-academic" onclick="switchView('academic')">Academic</button>
+        </div>
         <a href="sandboxes.html" class="btn btn-primary">Explore Open Data</a>
       </div>
     </div>
@@ -36,53 +42,140 @@
         <span class="section-label">Pillar 04: Public Praxis</span>
         <h1 class="page-title">Public Outreach &amp; Events</h1>
         <p class="page-intro">
-          Transforming knowledge into collective public action through an active calendar of summits, quarterly conclaves, and civic roundtables[cite: 2].
+          Transforming research into collective public action through our continuous calendar of summits, quarterly conclaves, and local civic roundtables[cite: 2].
         </p>
       </div>
     </section>
 
+    <!-- Outreach Calendar Grid -->
     <section class="content-section">
       <div class="container">
         <div class="grid-3">
-          <div class="card">
-            <span class="m-tag">Quarterly Series</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Q2 Regional Development Roundtable</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Comparing primary care delivery across decentralized Kerala Panchayats and urban municipal clinics[cite: 2].
-            </p>
-            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1rem;">Hybrid Format (In-Person &amp; Streamed)[cite: 2]</p>
-            <a href="#" class="btn btn-primary" style="font-size: 0.8rem;">Register for Roundtable</a>
+          <!-- Card 1 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Quarterly Series</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Q2 Regional Development Roundtable</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Comparing primary care delivery across decentralized Kerala Panchayats and urban municipal clinics[cite: 2].
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1.5rem; line-height: 1.5;">
+                <strong>Format:</strong> Hybrid (In-Person &amp; Streamed)[cite: 2]<br>
+                <strong>Focus:</strong> Palliative care &amp; ward clinics
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary" style="font-size: 0.82rem; text-align: center;">Register for Roundtable</a>
           </div>
 
-          <div class="card">
-            <span class="m-tag">Flagship Gathering</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Annual People and Development Summit</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Bringing together village leaders, independent researchers, and grassroots activists across India[cite: 1, 2].
-            </p>
-            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1rem;">Annual Calendar | Multi-day[cite: 2]</p>
-            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">View Summit Agenda</a>
+          <!-- Card 2 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Flagship Summit</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Annual People and Development Summit</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Our flagship annual convention bringing together students, village leaders, independent researchers, and citizens[cite: 1, 2].
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1.5rem; line-height: 1.5;">
+                <strong>Schedule:</strong> Annual Flagship Series[cite: 2]<br>
+                <strong>Venue:</strong> Thiruvananthapuram, Kerala
+              </div>
+            </div>
+            <a href="#" class="btn btn-secondary" style="font-size: 0.82rem; text-align: center;">View Summit Agenda</a>
           </div>
 
-          <div class="card">
-            <span class="m-tag">Civic Action</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Monthly Hands-on Workshops</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Ward-level data audits, decentralized composting techniques, and participatory budgeting[cite: 2].
-            </p>
-            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1rem;">Local Body Centers | Monthly[cite: 2]</p>
-            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">View Schedule</a>
+          <!-- Card 3 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Action Workshops</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Monthly Hands-on Workshops</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Hands-on sessions on Ward-level environmental auditing, open-source data mapping, and participatory planning[cite: 2].
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 1.5rem; line-height: 1.5;">
+                <strong>Format:</strong> In-Person Community Centers[cite: 2]<br>
+                <strong>Frequency:</strong> Monthly Cohorts[cite: 2]
+              </div>
+            </div>
+            <a href="#" class="btn btn-secondary" style="font-size: 0.82rem; text-align: center;">Join Workshop Roster</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Civic Roundtables & Fellowships Banner -->
+    <section class="content-section" style="background: var(--bg-alt);">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <span class="section-label">Grassroots Engagement</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1rem;">Policy Hackathons &amp; Fellowships</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            We sponsor summer fellowships and localized policy hackathons designed to pair student researchers with Panchayat administrators to build real-world civic solutions[cite: 2].
+          </p>
+          <a href="#" class="btn btn-accent">Apply for Summer Fellowship</a>
+        </div>
+        <div class="card">
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.75rem;">P&amp;D Fellowships (2026 Cohort)</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Open to undergraduate and postgraduate researchers focusing on decentralized planning, ecological habitat, and civic technology.
+          </p>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">Stipend &amp; Mentorship Supported</span>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-bottom">
-      <div>Contact for event registrations: contact@peopleanddevelopment.org[cite: 2]</div>
-      <div>© 2026 People &amp; Development[cite: 2].</div>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">PEOPLE &amp; DEVELOPMENT</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.75rem;">Journal. Portal. Community.[cite: 2]</p>
+          <p style="font-size: 0.8rem; color: var(--text-subtle);">Published by: <strong>NN Syam Chandra</strong>[cite: 2]</p>
+        </div>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="the-commons.html">The Commons</a>[cite: 2]</li>
+            <li><a href="sandboxes.html">Data Sandboxes</a>[cite: 2]</li>
+            <li><a href="homages.html">Homages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="events.html">Public Outreach</a>[cite: 2]</li>
+            <li><a href="print-zine.html">Print Edition</a>[cite: 2]</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Creative Commons Open-Access</a>[cite: 2]</li>
+            <li><a href="#">Peer-Review SOP</a>[cite: 2]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Email: <a href="mailto:contact@peopleanddevelopment.org">contact@peopleanddevelopment.org</a>[cite: 2]</div>
+        <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.[cite: 2]</div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    function switchView(mode) {
+      const publicBtn = document.getElementById('btn-public');
+      const academicBtn = document.getElementById('btn-academic');
+      if (mode === 'academic') {
+        academicBtn.classList.add('active');
+        publicBtn.classList.remove('active');
+        document.body.classList.add('academic-view');
+      } else {
+        publicBtn.classList.add('active');
+        academicBtn.classList.remove('active');
+        document.body.classList.remove('academic-view');
+      }
+    }
+  </script>
 </body>
 </html>
