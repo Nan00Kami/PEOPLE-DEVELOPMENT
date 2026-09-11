@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Print Zine — People & Development</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,6 +27,10 @@
         <a href="print-zine.html" class="active">Print Zine</a>
       </nav>
       <div class="nav-actions">
+        <div class="toggle-wrap" role="group" aria-label="Audience View Switch">
+          <button class="toggle-btn active" id="btn-public" onclick="switchView('public')">Public</button>
+          <button class="toggle-btn" id="btn-academic" onclick="switchView('academic')">Academic</button>
+        </div>
         <a href="sandboxes.html" class="btn btn-primary">Explore Open Data</a>
       </div>
     </div>
@@ -41,36 +47,115 @@
       </div>
     </section>
 
+    <!-- Print Overview & Specs -->
     <section class="content-section">
       <div class="container grid-2" style="align-items: center;">
         <div>
-          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.25rem;">The Bookazine Format</h2>
-          <p style="margin-bottom: 1rem; color: var(--text-muted); font-size: 1.05rem;">
-            Printed on lightweight recycled paper, priced affordably for students, Panchayat libraries, and civic activists[cite: 2].
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 1.25rem;">The Bookazine Format</h2>
+          <p style="margin-bottom: 1.2rem; color: var(--text-muted); font-size: 1.05rem;">
+            Printed on lightweight recycled paper, priced affordably for students, Panchayat libraries, and civic activists[cite: 2]. Designed to survive field conditions and provide lasting reference in local reading rooms[cite: 2].
           </p>
           <p style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem;">
-            <strong>Scan-to-Cloud Integration:</strong> Every printed report contains QR codes linking directly to open data repositories, audio summaries, and methodological frameworks on your phone[cite: 2].
+            <strong>Scan-to-Cloud Integration:</strong> Every printed essay and report contains QR codes linking directly to open data repositories, audio summaries, and methodological frameworks on your smartphone[cite: 2].
           </p>
           <a href="#" class="btn btn-accent">Subscribe to the Quarterly Print Edition</a>
         </div>
 
         <div class="card" style="text-align: center; padding: 3rem 2rem; background: var(--bg-alt);">
-          <span class="m-tag">Subscription Benefits</span>
-          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 0.75rem 0;">4 Issues Per Year</h3>
+          <span class="m-tag" style="background: var(--surface); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem;">Annual Subscription</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 0.75rem;">4 Issues Delivered Yearly</h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Includes full digital commons archive access, raw data bundles, and physical delivery to your doorstep[cite: 2].
+            Includes full digital commons archive access, raw data bundles, and door-to-door print delivery[cite: 2].
           </p>
-          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">ISSN: 2026-PD-01</span>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); margin-bottom: 1rem;">ISSN: 2026-PD-01</div>
+          <p style="font-size: 0.8rem; color: var(--text-subtle);">Subsidized rates available for student collectives &amp; rural libraries[cite: 2].</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Print Issues -->
+    <section class="content-section" style="background: var(--bg-alt);">
+      <div class="container">
+        <span class="section-label">Archive Editions</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 2rem;">Recent &amp; Upcoming Volumes</h2>
+        <div class="grid-3">
+          <div class="card">
+            <span class="m-tag">Vol. 01 • Q1 2026</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">The Revival Issue</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Decentralized planning rebooted, coastal adaptation debates, and the founding philosophy of COSTFORD[cite: 1, 2].</p>
+            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">Order Single Copy</a>
+          </div>
+
+          <div class="card">
+            <span class="m-tag">Vol. 02 • Q2 2026</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">Panchayat Care Economies</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Evaluating community palliative networks and primary care infrastructure across changing demographics[cite: 2].</p>
+            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">Pre-Order Issue</a>
+          </div>
+
+          <div class="card">
+            <span class="m-tag">Vol. 03 • Q3 2026</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">Algorithmic Welfare &amp; Civic Tech</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Civic audits of digital benefit delivery, rural biometric infrastructure, and data ownership[cite: 2].</p>
+            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">Coming Soon</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-bottom">
-      <div>Distribution inquiries: contact@peopleanddevelopment.org[cite: 2]</div>
-      <div>© 2026 People &amp; Development[cite: 2].</div>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">PEOPLE &amp; DEVELOPMENT</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.75rem;">Journal. Portal. Community.[cite: 2]</p>
+          <p style="font-size: 0.8rem; color: var(--text-subtle);">Published by: <strong>NN Syam Chandra</strong>[cite: 2]</p>
+        </div>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="the-commons.html">The Commons</a>[cite: 2]</li>
+            <li><a href="sandboxes.html">Data Sandboxes</a>[cite: 2]</li>
+            <li><a href="homages.html">Homages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="events.html">Public Outreach</a>[cite: 2]</li>
+            <li><a href="print-zine.html">Print Edition</a>[cite: 2]</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Open Access Creative Commons</a>[cite: 2]</li>
+            <li><a href="#">Peer-Review SOP</a>[cite: 2]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Distribution inquiries: <a href="mailto:contact@peopleanddevelopment.org">contact@peopleanddevelopment.org</a>[cite: 2]</div>
+        <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.[cite: 2]</div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    function switchView(mode) {
+      const publicBtn = document.getElementById('btn-public');
+      const academicBtn = document.getElementById('btn-academic');
+      if (mode === 'academic') {
+        academicBtn.classList.add('active');
+        publicBtn.classList.remove('active');
+        document.body.classList.add('academic-view');
+      } else {
+        publicBtn.classList.add('active');
+        academicBtn.classList.remove('active');
+        document.body.classList.remove('academic-view');
+      }
+    }
+  </script>
 </body>
 </html>
