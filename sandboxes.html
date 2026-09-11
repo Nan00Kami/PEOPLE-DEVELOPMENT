@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Sandboxes — People & Development</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,6 +27,10 @@
         <a href="print-zine.html">Print Zine</a>
       </nav>
       <div class="nav-actions">
+        <div class="toggle-wrap" role="group" aria-label="Audience View Switch">
+          <button class="toggle-btn active" id="btn-public" onclick="switchView('public')">Public</button>
+          <button class="toggle-btn" id="btn-academic" onclick="switchView('academic')">Academic</button>
+        </div>
         <a href="sandboxes.html" class="btn btn-primary">Explore Open Data</a>
       </div>
     </div>
@@ -36,50 +42,138 @@
         <span class="section-label">Pillar 02: Full Transparency &amp; Civic Audit</span>
         <h1 class="page-title">Open Data Sandboxes</h1>
         <p class="page-intro">
-          Interactive maps and open data filtered down to the Grama Panchayat and Ward level, backed by downloadable, raw CSV and JSON datasets[cite: 2].
+          Interactive maps and civic audit data filtered down to the Grama Panchayat and Ward level, backed by raw, downloadable CSV and JSON datasets.
         </p>
       </div>
     </section>
 
+    <!-- Interactive Sandboxes Grid -->
     <section class="content-section">
       <div class="container">
         <div class="grid-3">
-          <div class="card">
-            <span class="m-tag">Interactive Sandbox</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">The Panchayat Climate &amp; Care Index</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Explore localized health, water management, and social security data across 1,000+ local bodies[cite: 2].
-            </p>
-            <a href="#" class="btn btn-primary" style="font-size: 0.8rem;">Launch Interactive Map</a>
+          <!-- Card 1 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Interactive Map</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">The Panchayat Climate &amp; Care Index</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Explore localized primary healthcare delivery, drinking water access, and social security coverage across 1,000+ local bodies[cite: 2]. Filterable by district and ward.
+              </p>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary" style="font-size: 0.82rem; margin-bottom: 0.5rem; display: block; text-align: center;">Launch Interactive Map</a>
+              <a href="#" class="btn btn-secondary" style="font-size: 0.82rem; display: block; text-align: center;">Download CSV (.csv)</a>
+            </div>
           </div>
 
-          <div class="card">
-            <span class="m-tag">Field Dialogue Data</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Coastal Adaptation: Seawall Metrics</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Field datasets tracking erosion and comparing seawalls with artisanal bio-shielding along Thiruvananthapuram[cite: 2].
-            </p>
-            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">Download CSV / JSON</a>
+          <!-- Card 2 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Field Dialogue Data</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Coastal Adaptation: Seawall Metrics</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Comparative field data tracking wave rebound, down-drift shoreline erosion, and community-led coastal vegetation along the Thiruvananthapuram shoreline[cite: 2].
+              </p>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary" style="font-size: 0.82rem; margin-bottom: 0.5rem; display: block; text-align: center;">View Time-Series Graphs</a>
+              <a href="#" class="btn btn-secondary" style="font-size: 0.82rem; display: block; text-align: center;">Download JSON (.json)</a>
+            </div>
           </div>
 
-          <div class="card">
-            <span class="m-tag">Urban Demographics</span>
-            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0;">Aging Care &amp; Municipal Clinics</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              Comparative audits evaluating primary health delivery across decentralized panchayats and municipal clinics[cite: 2].
-            </p>
-            <a href="#" class="btn btn-secondary" style="font-size: 0.8rem;">Download CSV / JSON</a>
+          <!-- Card 3 -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="m-tag" style="background: var(--bg-alt); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem;">Civic Audit</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem;">Decentralized Waste &amp; Ward Budgets</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Audit of capital allocations for decentralized composting units, Haritha Karma Sena operations, and local ward-level material recovery facilities.
+              </p>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary" style="font-size: 0.82rem; margin-bottom: 0.5rem; display: block; text-align: center;">Explore Budget Explorer</a>
+              <a href="#" class="btn btn-secondary" style="font-size: 0.82rem; display: block; text-align: center;">Download Dataset (.csv)</a>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Open Data SOP -->
+    <section class="content-section" style="background: var(--bg-alt);">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <span class="section-label">Radical Clarity</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1rem;">Open Data &amp; Audit SOP</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Every dataset hosted in our sandboxes is published under the Creative Commons CC BY-SA 4.0 license[cite: 2]. We do not obscure raw sources: every metric links directly to Grama Sabha audits, local body publications, and verifiable field surveys[cite: 1, 2].
+          </p>
+          <a href="#" class="btn btn-secondary">Read Data Verification SOP →</a>
+        </div>
+        <div class="matrix-card">
+          <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem;">Supported Formats</h4>
+          <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li style="padding: 0.4rem 0; border-bottom: 1px dotted var(--border);"><strong>CSV:</strong> Clean tables with standardized ward codes[cite: 2]</li>
+            <li style="padding: 0.4rem 0; border-bottom: 1px dotted var(--border);"><strong>JSON:</strong> Structured geographic &amp; statistical payloads[cite: 2]</li>
+            <li style="padding: 0.4rem 0;"><strong>GeoJSON:</strong> Granular boundary layers for QGIS / Web mapping</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-bottom">
-      <div>Data formats: CSV, JSON, GeoJSON (CC BY-SA)[cite: 2]</div>
-      <div>© 2026 People &amp; Development[cite: 2].</div>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">PEOPLE &amp; DEVELOPMENT</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.75rem;">Journal. Portal. Community.[cite: 2]</p>
+          <p style="font-size: 0.8rem; color: var(--text-subtle);">Published by: <strong>NN Syam Chandra</strong>[cite: 2]</p>
+        </div>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="the-commons.html">The Commons</a>[cite: 2]</li>
+            <li><a href="sandboxes.html">Data Sandboxes</a>[cite: 2]</li>
+            <li><a href="homages.html">Homages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="events.html">Public Outreach</a>[cite: 2]</li>
+            <li><a href="print-zine.html">Print Edition</a>[cite: 2]</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Open Data (CC BY-SA 4.0)</a>[cite: 2]</li>
+            <li><a href="#">Peer-Review SOP</a>[cite: 2]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Email: <a href="mailto:contact@peopleanddevelopment.org">contact@peopleanddevelopment.org</a>[cite: 2]</div>
+        <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.[cite: 2]</div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    function switchView(mode) {
+      const publicBtn = document.getElementById('btn-public');
+      const academicBtn = document.getElementById('btn-academic');
+      if (mode === 'academic') {
+        academicBtn.classList.add('active');
+        publicBtn.classList.remove('active');
+        document.body.classList.add('academic-view');
+      } else {
+        publicBtn.classList.add('active');
+        academicBtn.classList.remove('active');
+        document.body.classList.remove('academic-view');
+      }
+    }
+  </script>
 </body>
 </html>
