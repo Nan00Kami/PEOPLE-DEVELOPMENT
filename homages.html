@@ -8,6 +8,64 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .video-entry {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .video-entry:last-child {
+      border-bottom: none;
+    }
+    .video-media-box {
+      position: relative;
+      width: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border);
+    }
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-media-box video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .video-details h3 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .video-details p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      .video-entry {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="top-bar">
@@ -43,107 +101,130 @@
       </div>
     </section>
 
-    <!-- The Four Visionaries Grid -->
-    <section class="content-section">
+    <!-- Four Visionaries Overview -->
+    <section class="content-section" style="padding-bottom: 2.5rem;">
       <div class="container">
         <span class="section-label">The Four Visionaries</span>
-        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 2rem;">Foundations of Decentralized Praxis</h2>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.75rem;">Foundations of Decentralized Praxis</h2>
         <div class="grid-4">
           <div class="card">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.35rem;">C. Achutha Menon</h3>
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.35rem;">C. Achutha Menon</h3>
             <span class="m-tag">Decentralized Governance</span>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.75rem;">
-              Visionary Chief Minister of Kerala who championed land reforms, decentralized planning, and established premier scientific and research institutions across the state.
-            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem;">Visionary Chief Minister of Kerala who championed land reforms, institutional building, and democratic decentralization.</p>
           </div>
-
           <div class="card">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.35rem;">Dr. K.N. Raj</h3>
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.35rem;">Dr. K.N. Raj</h3>
             <span class="m-tag">Human Development</span>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.75rem;">
-              Economist and founder of the Centre for Development Studies (CDS). Reoriented economic planning toward literacy, healthcare, and human dignity over mere growth aggregates.
-            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem;">Founder of the Centre for Development Studies (CDS); reoriented planning toward health and education over mere growth aggregates.</p>
           </div>
-
           <div class="card">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.35rem;">Laurie Baker</h3>
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.35rem;">Laurie Baker</h3>
             <span class="m-tag">Ecological Habitat</span>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.75rem;">
-              Demystified architecture by proving that sustainable, low-cost buildings can be made with local materials, passive ventilation, and unplastered brickwork.
-            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem;">Demystified architecture by demonstrating that resilient, cost-effective buildings rely on local materials and passive cooling.</p>
           </div>
-
           <div class="card">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.35rem;">T.R. Chandradutt</h3>
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.35rem;">T.R. Chandradutt</h3>
             <span class="m-tag">“Dutt Mash” / COSTFORD</span>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.75rem;">
-              Pioneered civic mobilization and mass science awareness through COSTFORD, turning ecological building into an accessible community movement.
-            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem;">Pioneered mass civic mobilization through COSTFORD, turning ecological building into an accessible community movement.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Embedded Featurette & Archival Context -->
-    <section class="content-section" style="background: var(--bg-alt);">
-      <div class="container grid-2" style="align-items: center;">
-        <div class="video-frame-wrap">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/r6ni3aFraXE" 
-            title="Laurie Baker: Uncommon Sense" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div>
-          <span class="section-label">Living Archive Spotlight</span>
-          <blockquote style="font-family: var(--font-serif); font-size: 1.35rem; line-height: 1.4; font-style: italic; margin-bottom: 1rem;">
-            “You ask the question of each item however small: is it necessary? If it’s not necessary, don’t do it.”
-          </blockquote>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
-            Excerpt from Vineet Radhakrishnan's documentary featurette <em>Uncommon Sense: The Life &amp; Architecture of Laurie Baker</em>. Documenting Baker’s radical deviation from standard architectural extravagance in favor of small, durable homes built for 250 sq ft and accessible budgets.
-          </p>
-          <a href="https://youtu.be/r6ni3aFraXE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            Watch Full Featurette on YouTube ↗
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 1990s COSTFORD Collection -->
-    <section class="content-section">
+    <!-- Video Dispatches & Documentaries -->
+    <section class="content-section" style="background: var(--bg-alt); padding-top: 2rem;">
       <div class="container">
-        <span class="section-label">Historical Collections</span>
-        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.5rem;">The 1990s COSTFORD Archives</h2>
-        <div class="grid-3">
-          <div class="card">
-            <span class="m-tag">Habitat Pamphlet</span>
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin: 0.5rem 0;">Brickwork &amp; The Traditional Jali</h4>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Original field sketches detailing rat-trap bond masonry and natural cross-ventilation openings without expensive framing.</p>
-            <a href="#" class="card-cta" style="font-size: 0.82rem; font-weight: 600; color: var(--accent);">View Archival Plate →</a>
+        <span class="section-label">Audio-Visual Archives</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 1rem;">Documentaries &amp; Field Dispatches</h2>
+        
+        <!-- Video 1: Local File from Repository -->
+        <article class="video-entry">
+          <div class="video-media-box">
+            <!-- Ensure filename and extension match your exact file in the repo -->
+            <video controls preload="metadata">
+              <source src="The_Man_Behind_Kerala’s_Grassroots_Housing_Revolution.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
+          <div class="video-details">
+            <span class="m-tag">Archive Film • Direct Repository</span>
+            <h3>The Man Behind Kerala’s Grassroots Housing</h3>
+            <p>
+              An in-depth retrospective chronicling the community housing movement across Kerala. This film examines the ground-level establishment of COSTFORD and the decentralized labor forces that transformed low-cost construction into a statewide social reality.
+            </p>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">Format: Archival MP4 Video</span>
+          </div>
+        </article>
 
-          <div class="card">
-            <span class="m-tag">Policy Document</span>
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin: 0.5rem 0;">Decentralized Habitat Guidelines</h4>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">The historical policy proposals submitted to the Kerala State Planning Board regarding participatory rural housing.</p>
-            <a href="#" class="card-cta" style="font-size: 0.82rem; font-weight: 600; color: var(--accent);">Read Historical Essay →</a>
+        <!-- Video 2: YouTube Featurette -->
+        <article class="video-entry">
+          <div class="video-media-box video-responsive">
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/r6ni3aFraXE" 
+              title="Uncommon Sense: The Life &amp; Architecture of Laurie Baker" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
           </div>
+          <div class="video-details">
+            <span class="m-tag">Documentary Featurette • YouTube</span>
+            <h3>Uncommon Sense: The Life &amp; Architecture of Laurie Baker</h3>
+            <p>
+              Vineet Radhakrishnan's documentary featurette capturing Laurie Baker's philosophy on material frugality, passive ventilation, jali brickwork, and his refusal to build for architectural extravagance over human need.
+            </p>
+            <a href="https://youtu.be/r6ni3aFraXE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+          </div>
+        </article>
 
-          <div class="card">
-            <span class="m-tag">Material Science</span>
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin: 0.5rem 0;">Filler Slabs &amp; Waste Reduction</h4>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Early engineering notes on reducing cement and structural steel usage by 30–40% using discarded terracotta roof tiles.</p>
-            <a href="#" class="card-cta" style="font-size: 0.82rem; font-weight: 600; color: var(--accent);">Download Notes (.PDF) →</a>
+        <!-- Video 3: YouTube Placeholder -->
+        <article class="video-entry">
+          <div class="video-media-box video-responsive">
+            <!-- Replace VIDEO_ID_3 with your actual YouTube ID -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/VIDEO_ID_3" 
+              title="Historical Homage Dispatch 03" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
           </div>
-        </div>
+          <div class="video-details">
+            <span class="m-tag">Archive Recording • YouTube</span>
+            <h3>Decentralized Planning &amp; The People’s Plan</h3>
+            <p>
+              Archival reflections on the historic decentralization of governance in Kerala, analyzing how the fiscal devolution of planning power empowered local Grama Sabhas and grassroots leadership.
+            </p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <!-- Video 4: YouTube Placeholder -->
+        <article class="video-entry">
+          <div class="video-media-box video-responsive">
+            <!-- Replace VIDEO_ID_4 with your actual YouTube ID -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/VIDEO_ID_4" 
+              title="Historical Homage Dispatch 04" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-details">
+            <span class="m-tag">Archival Interview • YouTube</span>
+            <h3>Economics of Human Dignity: Dr. K.N. Raj &amp; CDS</h3>
+            <p>
+              Historical discussion detailing Dr. K.N. Raj’s economic framework that prioritized public health, land reform, and foundational education as the primary drivers of enduring social development.
+            </p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-bottom">
-      <div>Maintained in collaboration with researchers and habitat activists.</div>
+      <div>Maintained in collaboration with COSTFORD and independent researchers.</div>
       <div>© 2026 People &amp; Development. Published under Creative Commons Open-Access.</div>
     </div>
   </footer>
