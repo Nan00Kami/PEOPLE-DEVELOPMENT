@@ -34,18 +34,15 @@
       height: 0;
       overflow: hidden;
     }
-    .video-responsive iframe {
+    .video-responsive iframe,
+    .video-responsive video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       border: 0;
-    }
-    .video-media-box video {
-      width: 100%;
-      height: auto;
-      display: block;
+      object-fit: cover;
     }
     .video-details h3 {
       font-family: var(--font-serif);
@@ -136,26 +133,8 @@
       <div class="container">
         <span class="section-label">Audio-Visual Archives</span>
         <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 1rem;">Documentaries &amp; Field Dispatches</h2>
-        
-        <!-- Video 1: Local File from Repository -->
-        <article class="video-entry">
-          <div class="video-media-box">
-            <!-- Ensure filename and extension match your exact file in the repo -->
-            <video controls preload="metadata">
-              <source src="The_Man_Behind_Kerala’s_Grassroots_Housing_Revolution.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="video-details">
-            <span class="m-tag">Archive Film • Direct Repository</span>
-            <h3>The Man Behind Kerala’s Grassroots Housing</h3>
-            <p>
-              An in-depth retrospective chronicling the community housing movement across Kerala. This film examines the ground-level establishment of COSTFORD and the decentralized labor forces that transformed low-cost construction into a statewide social reality.
-            
-          </div>
-        </article>
 
-        <!-- Video 2: YouTube Featurette -->
+        <!-- Video 1: Laurie Baker (YouTube) -->
         <article class="video-entry">
           <div class="video-media-box video-responsive">
             <iframe 
@@ -175,13 +154,12 @@
           </div>
         </article>
 
-        <!-- Video 3: YouTube Placeholder -->
+        <!-- Video 2: C. Achutha Menon (YouTube) -->
         <article class="video-entry">
           <div class="video-media-box video-responsive">
-            <!-- Replace VIDEO_ID_3 with your actual YouTube ID -->
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/VIDEO_ID_3" 
-              title="Historical Homage Dispatch 03" 
+              src="https://www.youtube-nocookie.com/embed/dIwPAMZxp48" 
+              title="Historical Homage Dispatch 02" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
             </iframe>
@@ -192,17 +170,16 @@
             <p>
               Archival reflections on the historic decentralization of governance in Kerala, analyzing how the fiscal devolution of planning power empowered local Grama Sabhas and grassroots leadership.
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+            <a href="https://youtu.be/dIwPAMZxp48" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
           </div>
         </article>
 
-        <!-- Video 4: YouTube Placeholder -->
+        <!-- Video 3: Dr. K.N. Raj (YouTube) -->
         <article class="video-entry">
           <div class="video-media-box video-responsive">
-            <!-- Replace VIDEO_ID_4 with your actual YouTube ID -->
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/VIDEO_ID_4" 
-              title="Historical Homage Dispatch 04" 
+              src="https://www.youtube-nocookie.com/embed/0m1ZQ4lVzL0" 
+              title="Historical Homage Dispatch 03" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
             </iframe>
@@ -213,7 +190,24 @@
             <p>
               Historical discussion detailing Dr. K.N. Raj’s economic framework that prioritized public health, land reform, and foundational education as the primary drivers of enduring social development.
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+            <a href="https://youtu.be/0m1ZQ4lVzL0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <!-- Video 4: Local File from Repository (MP4) -->
+        <article class="video-entry">
+          <div class="video-media-box video-responsive">
+            <video controls preload="metadata">
+              <source src="The_Man_Behind_Kerala’s_Grassroots_Housing_Revolution.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-details">
+            <span class="m-tag">Archive Film • Direct Repository</span>
+            <h3>The Man Behind Kerala’s Grassroots Housing</h3>
+            <p>
+              An in-depth retrospective chronicling the community housing movement across Kerala. This film examines the ground-level establishment of COSTFORD and the decentralized labor forces that transformed low-cost construction into a statewide social reality.
+            </p>
           </div>
         </article>
 
